@@ -1,0 +1,85 @@
+[colors.bright]
+black = "#4a555b"
+blue = "#6699cc"
+cyan = "#72a58c"
+green = "#8a9a7b"
+magenta = "#824b59"
+red = "#f85552"
+white = "#fffbef"
+yellow = "#e6b450"
+
+[colors.normal]
+black = "#2e383c"
+blue = "#7fbbb3"
+cyan = "#83c092"
+green = "#a7c080"
+magenta = "#d699b6"
+red = "#e67e80"
+white = "#d3c6aa"
+yellow = "#dbbc7f"
+
+[colors.primary]
+background = "#1e2326"
+foreground = "#d3c6aa"
+
+[cursor]
+style = "Beam"
+thickness = 0.15
+unfocused_hollow = true
+vi_mode_style = "None"
+
+[font]
+size = 18
+
+[font.bold]
+family = "JetBrainsMono Nerd Font"
+style = "Bold"
+
+[font.italic]
+family = "JetBrainsMono Nerd Font"
+style = "Italic"
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+style = "Regular"
+
+[[keyboard.bindings]]
+action = "Copy"
+key = "C"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "Paste"
+key = "V"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "Quit"
+key = "Q"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "None"
+key = "W"
+mods = "Control|Shift"
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[selection]
+save_to_clipboard = true
+
+[window]
+decorations = "none"
+opacity = 0.95
+
+[window.dimensions]
+columns = 110
+lines = 30
+
+[window.padding]
+x = 12
+y = 12
+
+[keyboard]
