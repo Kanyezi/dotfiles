@@ -1,85 +1,91 @@
-[colors.bright]
-black = "#4a555b"
-blue = "#6699cc"
-cyan = "#72a58c"
-green = "#8a9a7b"
-magenta = "#824b59"
-red = "#f85552"
-white = "#fffbef"
-yellow = "#e6b450"
+# ==========================================================
+#  Alacritty 配置  ––  Everforest 配色（6 套，已修正格式）
+# ==========================================================
 
-[colors.normal]
-black = "#2e383c"
-blue = "#7fbbb3"
-cyan = "#83c092"
-green = "#a7c080"
-magenta = "#d699b6"
-red = "#e67e80"
-white = "#d3c6aa"
-yellow = "#dbbc7f"
-
-[colors.primary]
-background = "#1e2326"
-foreground = "#d3c6aa"
-
-[cursor]
-style = "Beam"
-thickness = 0.15
-unfocused_hollow = true
-vi_mode_style = "None"
-
+# --------  字体  --------
 [font]
-size = 18
-
-[font.bold]
-family = "JetBrainsMono Nerd Font"
-style = "Bold"
-
-[font.italic]
-family = "JetBrainsMono Nerd Font"
-style = "Italic"
+size = 16
 
 [font.normal]
 family = "JetBrainsMono Nerd Font"
-style = "Regular"
+style  = "Regular"
 
-[[keyboard.bindings]]
-action = "Copy"
-key = "C"
-mods = "Control|Shift"
+[font.bold]
+family = "JetBrainsMono Nerd Font"
+style  = "Bold"
 
-[[keyboard.bindings]]
-action = "Paste"
-key = "V"
-mods = "Control|Shift"
+[font.italic]
+family = "JetBrainsMono Nerd Font"
+style  = "Italic"
 
-[[keyboard.bindings]]
-action = "Quit"
-key = "Q"
-mods = "Control|Shift"
-
-[[keyboard.bindings]]
-action = "None"
-key = "W"
-mods = "Control|Shift"
-
-[scrolling]
-history = 10000
-multiplier = 3
-
-[selection]
-save_to_clipboard = true
-
+# --------  窗口  --------
 [window]
 decorations = "none"
-opacity = 0.95
+opacity     = 0.95
 
 [window.dimensions]
 columns = 110
-lines = 30
+lines   = 30
 
 [window.padding]
 x = 12
 y = 12
 
-[keyboard]
+# --------  光标  --------
+[cursor]
+style            = "Beam"
+thickness        = 0.15
+unfocused_hollow = true
+vi_mode_style    = "None"
+
+# --------  滚动/选择/键盘  --------
+[scrolling]
+history    = 10000
+multiplier = 3
+
+[selection]
+save_to_clipboard = true
+
+[[keyboard.bindings]]
+action = "Copy"
+key    = "C"
+mods   = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "Paste"
+key    = "V"
+mods   = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "Quit"
+key    = "Q"
+mods   = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "None"
+key    = "W"
+mods   = "Control|Shift"
+
+[colors.primary]
+background = "#272e33"
+foreground = "#d3c6aa"
+
+[colors.normal]
+black   = "#414b50"
+red     = "#e67e80"
+green   = "#a7c080"
+yellow  = "#dbbc7f"
+blue    = "#7fbbb3"
+magenta = "#d699b6"
+cyan    = "#83c092"
+white   = "#d3c6aa"
+
+[colors.bright]
+black   = "#475258"
+red     = "#e67e80"
+green   = "#a7c080"
+yellow  = "#dbbc7f"
+blue    = "#7fbbb3"
+magenta = "#d699b6"
+cyan    = "#83c092"
+white   = "#d3c6aa"

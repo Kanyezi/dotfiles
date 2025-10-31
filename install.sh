@@ -1,30 +1,31 @@
 #!/usr/bin/env bash
-# link-to-config.sh
-# 将当前目录下的所有文件夹软链到 ~/.config
-# 已有同名目录则备份为 *.bak
+# deploy.sh —— 把当前目录下所有文件夹软链到 ~/.config/
 
 set -euo pipefail
 
 CONFIG_DIR="$HOME/.config"
-BACKUP_SUFFIX=".bak.$(date +%s)"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-# 确保 ~/.config 存在
 mkdir -p "$CONFIG_DIR"
 
-for dir in */; do
-    [[ -d $dir ]] || continue          # 只处理目录
-    dir_name=${dir%/}                  # 去掉末尾 /
-    target="$CONFIG_DIR/$dir_name"
+for src in "$SCRIPT_DIR"/*/; do
+    [[ ! -d $src ]] && continue        # 跳过非目录
+    folder=$(basename "$src")
 
-    if [[ -e $target ]]; then
-        # 已存在：先备份
-        backup="${target}${BACKUP_SUFFIX}"
-        echo "备份已存在的 $target -> $backup"
-        mv "$target" "$backup"
+    dst="$CONFIG_DIR/$folder"
+
+    if [[ -e "$dst" ]]; then
+        read -rp "⚠️  $dst 已存在，覆盖吗？(y/N) " ans
+        [[ $ans =~ ^[Yy]$ ]] || { echo "跳过 $folder"; continue; }
+
+        # 备份旧目标（可选）
+        mv "$dst" "${dst}.bak.$(date +%s)" 2>/dev/null || true
     fi
 
-    echo "链接 $PWD/$dir_name -> $target"
-    ln -sfn "$PWD/$dir_name" "$target"
+    # 创建父目录并链接
+    mkdir -p "$(dirname "$dst")"
+    ln -sfn "$src" "$dst"
+    echo "✅ 链接 $src  ->  $dst"
 done
 
 echo "全部完成！"

@@ -1,0 +1,52 @@
+/* ===== 全局：bar 本身完全透明 ===== */
+window#waybar {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    box-shadow: none;
+    color: #ffffff;
+}
+
+/* ===== 通用按钮（半透明纯色代替毛玻璃） ===== */
+#workspaces,
+#tray,
+#custom-arch,
+#network,
+#memory,
+#cpu,
+#pulseaudio,
+#backlight,
+#battery,
+#clock {
+    background-color: rgba(30, 30, 30, 0.8); /* 60% 不透明度 = 伪磨砂 */
+    border-radius: 10px;
+    margin: 4px 2px;
+    padding: 2px 8px;
+    border: none;
+    box-shadow: none;
+}
+
+/* 图标/文字完全不透明 */
+#workspaces label,
+#custom-arch,
+#network label,
+#memory label,
+#cpu label,
+#pulseaudio label,
+#backlight label,
+#battery label,
+#clock label {
+    opacity: 1;
+    color: #ffffff;
+}
+
+/* 工作区点缀色 */
+#workspaces button {
+    padding: 0 6px;
+    color: #7fbbb3;
+}
+#workspaces button.active {
+    color: #a7c080;
+}
+#workspaces button.urgent {
+    color: #e67e80;
+}
