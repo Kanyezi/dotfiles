@@ -5,7 +5,7 @@
   "height": 37,
   "spacing": 4,
 
-  "modules-left":   ["custom/arch", "tray"],
+  "modules-left":   ["custom/arch", "clock", "tray"],
   "modules-center": ["niri/workspaces"],
   "modules-right":  ["network", "memory", "cpu", "pulseaudio", "backlight", "battery"],
 
@@ -14,6 +14,11 @@
     "format": " ",
     "on-click": "rofi -show drun",
     "tooltip": false
+  },
+  "clock": {
+    "format": "{:%H:%M:%S}",
+    "interval": 1,
+    "tooltip-format": "<big>{:%Y-%m-%d}</big>\n<tt>{calendar}</tt>"
   },
   "tray": {
     "icon-size": 18,
