@@ -6,15 +6,61 @@
 // 输入设备配置。
 // 选项完整列表请见维基：
 // https://yalter.github.io/niri/Configuration:-Input
-workspace "1"
-workspace "2"
+
+workspace "browser"
+workspace "editor"
 workspace "3"
 workspace "4"
-workspace "5"
-workspace "6"
-workspace "7"
-workspace "8"
-workspace "9"
+workspace "music"
+workspace "discord"
+workspace "steam"
+workspace "qq"
+workspace "wechat"
+
+window-rule{
+    match app-id="zen"
+    open-on-workspace "browser"
+}
+window-rule{
+    match app-id="Code"
+    open-on-workspace "editor"
+}
+
+window-rule{
+    match app-id="qqmusic"
+    open-on-workspace "music"
+}
+window-rule{
+    match app-id="Code"
+    open-on-workspace "editor"
+}
+window-rule{
+    match app-id="discord"
+    open-on-workspace "discord"
+}
+window-rule{
+    match app-id="steam"
+    open-on-workspace "steam"
+}
+window-rule{
+    match app-id="QQ"
+    open-on-workspace "qq"
+}
+window-rule{
+    match app-id="wechat"
+    open-on-workspace "wechat"
+}
+
+spawn-at-startup "zen-browser"
+spawn-at-startup "code"
+
+spawn-at-startup "qqmusic"
+spawn-at-startup "discord"
+spawn-at-startup "steam"
+spawn-at-startup "linuxqq"
+spawn-at-startup "wechat-universal"
+spawn-at-startup "niri" "msg" "action" "focus-workspace" "browser"
+
 input {
     keyboard {
         xkb {

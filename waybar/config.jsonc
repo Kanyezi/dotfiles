@@ -30,20 +30,24 @@
     "format": "{icon}",
     "on-click": "activate",
     "persistent-workspaces": {
-      "1": [],
-      "2": [],
-      "3": [],
-      "4": [],
-      "5": [],
-      "6": [],
-      "7": [],
-      "8": [],
-      "9": []
+      
     },
     "format-icons": {
-      "active":        ""
-      // "default":       "",
-      // "urgent":        ""
+      // Named workspaces
+      // (you need to configure them in niri)
+      "browser": "",
+      "editor": "",
+      "3": "",
+      "4": "",
+      "music":"",
+      "discord": "",
+      "steam": "",
+      "qq": "",
+      "wechat": "",
+
+      // Icons by state
+      "active": "",
+      "default": ""
     }
   },
 
