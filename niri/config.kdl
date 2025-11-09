@@ -7,6 +7,8 @@
 // 选项完整列表请见维基：
 // https://yalter.github.io/niri/Configuration:-Input
 
+
+
 workspace "browser"
 workspace "editor"
 workspace "3"
@@ -60,6 +62,12 @@ spawn-at-startup "steam"
 spawn-at-startup "linuxqq"
 spawn-at-startup "wechat-universal"
 spawn-at-startup "niri" "msg" "action" "focus-workspace" "browser"
+
+environment {
+    GTK_IM_MODULE "fcitx"
+    QT_IM_MODULE "fcitx" 
+    XMODIFIERS "@im=fcitx"
+}
 
 input {
     keyboard {
@@ -187,7 +195,7 @@ layout {
     // preset-window-heights { }
 
     // 你可以更改新窗口的默认宽度。
-    default-column-width { proportion 0.5; }
+    default-column-width { proportion 1.0; }
     // 如果留空，窗口本身将决定它们的初始宽度。
     // default-column-width {}
 
