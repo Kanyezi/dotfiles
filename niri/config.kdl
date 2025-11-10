@@ -8,11 +8,11 @@
 // https://yalter.github.io/niri/Configuration:-Input
 
 
-
 workspace "browser"
 workspace "editor"
 workspace "3"
 workspace "4"
+workspace "5"
 workspace "music"
 workspace "discord"
 workspace "steam"
@@ -195,7 +195,7 @@ layout {
     // preset-window-heights { }
 
     // 你可以更改新窗口的默认宽度。
-    default-column-width { proportion 1.0; }
+    default-column-width { proportion 0.5; }
     // 如果留空，窗口本身将决定它们的初始宽度。
     // default-column-width {}
 
@@ -549,6 +549,7 @@ binds {
     Mod+7 { focus-workspace 7; }
     Mod+8 { focus-workspace 8; }
     Mod+9 { focus-workspace 9; }
+    Mod+0 { focus-workspace 10; }
     Mod+Shift+1 { move-column-to-workspace 1; }
     Mod+Shift+2 { move-column-to-workspace 2; }
     Mod+Shift+3 { move-column-to-workspace 3; }
@@ -558,6 +559,7 @@ binds {
     Mod+Shift+7 { move-column-to-workspace 7; }
     Mod+Shift+8 { move-column-to-workspace 8; }
     Mod+Shift+9 { move-column-to-workspace 9; }
+    Mod+Shift+0 { move-column-to-workspace 10; }
 
     // Alternatively, there are commands to move just a single window:
     // Mod+Ctrl+1 { move-window-to-workspace 1; }

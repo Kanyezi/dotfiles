@@ -29,6 +29,7 @@
   "niri/workspaces": {
     "format": "{icon}",
     "on-click": "activate",
+    "active-only": true,
     "persistent-workspaces": {
       
     },
@@ -39,6 +40,7 @@
       "editor": "",
       "3": "",
       "4": "",
+      "5": "",
       "music":"",
       "discord": "",
       "steam": "",
