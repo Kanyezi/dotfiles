@@ -5,6 +5,8 @@ vim.pack.add({
   { src = 'https://github.com/neovim/nvim-lspconfig' }, -- LSP 配置
   { src = 'https://github.com/nvim-mini/mini.pick' },   -- 文件/缓冲区选择器
   { src = 'https://github.com/nvim-mini/mini.files' },  -- 文件浏览器
+  { src = 'https://github.com/stevearc/overseer.nvim' },-- 运行插件
+  { src = 'https://github.com/CRAG666/code_runner.nvim' },
 })
 
 -- Treesitter 安装并懒加载
@@ -42,5 +44,7 @@ vim.api.nvim_create_autocmd({ 'BufReadPre', 'BufNewFile' }, {
   callback = function()
     require('plugins.mason')
     require('plugins.mini')
+    -- require('plugins.runner')
+    require('plugins.coderunner')
   end,
 })
