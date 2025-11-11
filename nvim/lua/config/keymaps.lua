@@ -30,12 +30,7 @@ keymap('n', '<C-Left>', ':vertical resize -2<CR>', { desc = 'Decrease window wid
 keymap('n', '<C-Right>', ':vertical resize +2<CR>', { desc = 'Increase window width' })
 
 -- 文件/插件快捷键
-keymap({ 'n', 'i', 'v' }, '<C-s>', '<ESC>:write<CR>', { desc = 'save file' })
-keymap('n', '<leader>e', ':lua MiniFiles.open()<CR>', { desc = 'open file explorer' })
-keymap('n', '<leader>f', ':Pick files<CR>', { desc = 'open file picker' })
-keymap('n', '<leader>h', ':Pick help<CR>', { desc = 'open help picker' })
-keymap('n', '<leader>b', ':Pick buffers<CR>', { desc = 'open buffer picker' })
-keymap('n', '<leader>dd', vim.diagnostic.open_float, { desc = 'diagnostic messages' })
+keymap('n', '<leader>e', ':NvimTreeToggle<CR>', { desc = 'Toggle file explorer' })
 
 -- LSP 快捷键
 keymap('n', 'gd', vim.lsp.buf.definition, { desc = 'Go to definition' })
