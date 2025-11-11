@@ -47,3 +47,6 @@ end, { desc = 'prev diagnostic' })
 keymap('n', ']d', function()
   vim.diagnostic.jump({ wrap = true, count = 1 })
 end, { desc = 'next diagnostic' })
+
+-- FineCmdline 快捷键
+vim.api.nvim_set_keymap('n', ':', '<cmd>FineCmdline<CR>', {noremap = true})

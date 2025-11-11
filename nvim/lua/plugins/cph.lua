@@ -90,6 +90,24 @@ return {
 				maximum_time = 5000,
 				output_compare_method = "squish",
 				view_output_diff = false,
+				-- 固定侧边 UI 配置（使用 split 界面并固定在右侧）
+				runner_ui = {
+					interface = "split",
+				},
+				split_ui = {
+					position = "right",
+					relative_to_editor = true,
+					total_width = 0.32,
+					total_height = 0.5,
+					-- 垂直布局：stdin, stdout, expected output, stderr
+					vertical_layout = {
+                        { 1, "tc" },
+                        { 1, "si" },
+                        { 1, "eo" },
+                        { 1, "se" },
+                        { 1, "so" },
+                    },
+				},
 				testcases_directory = "./test",
 				testcases_use_single_file = false,
 				testcases_auto_detect_storage = true,
