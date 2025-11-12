@@ -95,7 +95,7 @@ return {
 					interface = "split",
 				},
 				split_ui = {
-					position = "right",
+					position = "left",
 					relative_to_editor = true,
 					total_width = 0.32,
 					total_height = 0.5,
