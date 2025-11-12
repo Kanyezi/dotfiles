@@ -18,5 +18,5 @@ vim.opt.foldlevel = 99                          -- 打开文件时默认不折�
 vim.g.mapleader = ' '                           -- 设置 leader 键为空格
 -- 默认复制到系统剪贴板
 vim.opt.clipboard:append("unnamedplus")
-
+vim.opt.termguicolors = true
 vim.cmd.colorscheme 'everforest'
