@@ -20,3 +20,5 @@ vim.g.mapleader = ' '                           -- 设置 leader 键为空格
 vim.opt.clipboard:append("unnamedplus")
 vim.opt.termguicolors = true
 vim.cmd.colorscheme 'everforest'
+-- 设置只在底部显示一个全局状态栏
+vim.opt.laststatus = 3
